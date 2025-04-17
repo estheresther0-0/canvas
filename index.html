@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var canvas = $("#canvas")[0];
+            var ctx = canvas.getContext("2d");
+            ctx.strokeStyles = "#f82";
+            ctx.lineWidth = 2; 
+            ctx.strokeRect(50,50, 90,140); 
+            ctx.strokeStyle = "#00f";
+            ctx.lineWidth = 4; 
+            ctx.strokeRect(150,114,180,90); 
+            ctx.strokeStyle= "#000";
+            ctx.lineWidth = 2; 
+            ctx.fillStyle = 'rgba(0,255,0,0.5)';
+            ctx.fillRect(120,14,180,90);
+            ctx.strokeRect(118,12,184,94);
+            ctx.clearRect(118,12,184,94);
+            ctx.strokeStyle = "#000    ";
+            ctx.arc(canvas.width/2, canvas.height/2, 140, 0, Math.PI*2, true);
+            ctx.stroke();
+            ctx.fillStyle = '#e449';
+            ctx.fill();
+            ctx.beginPath();
+            ctx.stokeStyle="#000";
+            ctx.lineWidth = 2; 
+            ctx.moveTo(50,150);
+            ctx.lineTo(150,50);
+            ctx.lineTo(250,150);
+            ctx.closePath();
+            ctx.stroke();
+        });
+    </script>
+    <style> 
+        canvas{
+              border: 2px solid #001;
+              background:  #568; 
+        }
+  
+  </style>
+</head>
+<body>
+        <canvas id="canvas" width="800" height="800">
+
+        </canvas>
+</body>
+</html>
